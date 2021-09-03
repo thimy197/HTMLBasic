@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note about Tags in HTML</title>
+  </head>
+  <body>
+    
+    <!-- 1. Use semantic HTML -->
+    <!-- 1.1 Các thẻ 'h' phải sử dụng đúng level, thường sẽ như 1 tree, title lớn nhất sẽ sd 'h1' và các cấp độ nhỏ hơn
+            sẽ h ở level nhỏ hơn, nhưng hãy đảm bảo các title cùng level có cùng ý nghĩa  -->
+
+    <!-- 1.2 Sử dụng <strong>,<em> thay vì <b>,<i>. Chúng trên giao diện hiển thị giống nhau nhưng thực chất
+            <strong>,<em> mang nhiều ý nghĩa hơn -->
+
+    <!-- 1.3 <table> tag nên có thẻ <caption> để mô tả nội dung của table đó -->
+    <table>
+      <caption>
+        Dogs age
+      </caption>
+      <tr>
+        <th>Dog</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Roger</td>
+        <td>7</td>
+      </tr>
+    </table>
+
+    <!-- 2 Use 'alt' attributes for images -->
+    <!-- It's also good for search engines -->
+    <img src="dog.png" alt="picture of my dog" />
+
+    <!-- 3 Use the 'role' attribute 
+        *'role' is used to assign a meaningful value when the tag does not convey the meaning already.
+
+        You can assign lots of different roles: complementary, list, listitem, main, navigation, 
+            region, tab, alert, application, article, banner, button, cell, checkbox, contentinfo, 
+            dialog, document, feed, figure, form, grid, gridcell, heading, img, listbox, row, rowgroup, 
+            search, switch, table, tabpanel, textbox, timer.
+        But you don't need to assign a role to every element in the page. Screen readers can infer from the HTML tag in most cases-->
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+    <!-- If you were forced(bị ép, bất đắt dĩ) to use a 'div' tag instead of 'nav', you'd use the navigation role: -->
+    <div role="navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- 4 Use the 'aria' attributes -->
+  </body>
+</html>
