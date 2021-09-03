@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduce IMAGES Tag</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 'alt' attribute: used by screens reader and also by search engine bots
                         Nếu hình ảnh không hiển thị được thì sẽ hiển thị thông tin trong 'alt' -->
     <!-- 'img' is inline element -->
-    <img src="./dog.jpg" alt="A picture of a dog" width="300" height="200">
+    <img src="./dog.jpg" alt="A picture of a dog" width="300" height="200" />
 
+    <!-- START: the 'FIGURE' Tag -->
     <!-- 'figure' tag thường được sử dụng với 'img' tag, hiển thị caption theo hình ảnh -->
     <!-- 'figcaption' wraps the caption text -->
     <!-- 'figure' & 'figcaption' is block elements -->
-    <figure style="text-align: center;">
-        <img src="./dog.jpg" alt="A Dog" height="200">
-        <figcaption>This is a nice dog</figcaption>
+    <figure style="text-align: center">
+      <img src="./dog.jpg" alt="A Dog" height="200" />
+      <figcaption>This is a nice dog</figcaption>
     </figure>
+    <!-- END: the 'FIGURE' Tag -->
 
-    <!-- the PICTURE Tag -->
+    <!-- START: the 'PICTURE' Tag -->
 
     <!-- Responsive images using 'srcset' attribute -->
     <!-- 'srcset' attribute: sẽ đặt image theo mật độ pixel/độ rộng của browser,
@@ -32,20 +34,22 @@
                     >=900px thì set width hình ở mức 100%(100 vw) -->
     <!-- Use https://responsivebreakpoints.com/ to split image -->
     <div>
-        <picture>
-            <img
-            sizes="(max-width: 500px) 50vw, (max-width: 900px) 80vw, 100vw" 
-            srcset="
-            castle_c_scale,w_200.jpg 200w,
-            castle_c_scale,w_613.jpg 613w,
-            castle_c_scale,w_821.jpg 821w,
+      <picture>
+        <img
+          sizes="(max-width: 500px) 50vw, (max-width: 900px) 80vw, 100vw"
+          srcset="
+            castle_c_scale,w_200.jpg   200w,
+            castle_c_scale,w_613.jpg   613w,
+            castle_c_scale,w_821.jpg   821w,
             castle_c_scale,w_1031.jpg 1031w,
             castle_c_scale,w_1209.jpg 1209w,
             castle_c_scale,w_1304.jpg 1304w,
-            castle_c_scale,w_1400.jpg 1400w"
-            src="./castle_c_scale,w_1400.jpg"
-            alt="">
-        </picture>
+            castle_c_scale,w_1400.jpg 1400w
+          "
+          src="./castle_c_scale,w_1400.jpg"
+          alt=""
+        />
+      </picture>
     </div>
 
     <!-- 'source' tag: tương tự như 'srcset' ở trên, khác biệt rất nhỏ,
@@ -57,11 +61,12 @@
                 +Dường như "sizes" attribute không sử dụng được trong trường hợp này(đã thử trong img và source tags),
                 nên là các hình trong source chỉ hiển thị theo kích thước(width in style) của img ở dưới  -->
     <picture>
-        <source media="(max-width: 500px)" srcset="castle_c_scale,w_613.jpg">
-        <source media="(max-width: 800px)" srcset="castle_c_scale,w_821.jpg">
-        <source media="(max-width: 1000px)" srcset="./dog.jpg" >
-        <img src="./dog.jpg" alt="" width="500px">
+      <source media="(max-width: 500px)" srcset="castle_c_scale,w_613.jpg" />
+      <source media="(max-width: 800px)" srcset="castle_c_scale,w_821.jpg" />
+      <source media="(max-width: 1000px)" srcset="./dog.jpg" />
+      <img src="./dog.jpg" alt="" width="500px" />
     </picture>
-      
-</body>
+
+    <!-- END: the 'PICTURE' Tag -->
+  </body>
 </html>
